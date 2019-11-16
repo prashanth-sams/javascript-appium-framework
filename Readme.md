@@ -17,6 +17,10 @@ export ANDROID_HOME=/Users/$(whoami)/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools
 ```
+- Make temp update in the same window
+```
+source ~/.bashrc
+```
 
 ### Installation
 ```
@@ -28,4 +32,10 @@ npm install
 ### Runner
 ```
 npm test
+```
+
+### Report
+```
+sudo npm install -g allure-commandline --save-dev
+allure generate allure-results/ && allure open
 ```

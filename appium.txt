@@ -1,7 +1,7 @@
 [35m[HTTP][39m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m
 [35m[HTTP][39m [90m{"capabilities":{"alwaysMatch":{"browserName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","platformName":"android","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"firstMatch":[{}]},"desiredCapabilities":{"browserName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","platformName":"android","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"}}[39m
 [debug] [35m[W3C][39m Calling AppiumDriver.createSession() with args: [{"browserName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","platformName":"android","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},null,{"alwaysMatch":{"browserName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","platformName":"android","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"firstMatch":[{}]}]
-[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1573923113932 (20:51:53 GMT+0400 (Gulf Standard Time))
+[debug] [35m[BaseDriver][39m Event 'newSessionRequested' logged at 1573938012954 (01:00:12 GMT+0400 (Gulf Standard Time))
 [35m[BaseDriver][39m The capabilities ["appiumVersion","deviceName","platformVersion","commandTimeout","app"] are not standard capabilities and should have an extension prefix
 [35m[Appium][39m 
 [35m[Appium][39m ======================================================================
@@ -49,7 +49,7 @@
 [35m[BaseDriver][39m   appiumVersion
 [35m[BaseDriver][39m   commandTimeout
 [35m[AndroidDriver][39m The desired capabilities should generally not include both an 'app' and a 'browserName'
-[35m[BaseDriver][39m Session created with session id: a4e2a4eb-4edc-4c97-9129-b45461e79c6f
+[35m[BaseDriver][39m Session created with session id: 988f24bc-af63-4eb7-98a5-4e1266823cae
 [35m[BaseDriver][39m Using local app './app/Android-NativeDemoApp-0.2.1.apk'
 [35m[BaseDriver][39m The current application path './app/Android-NativeDemoApp-0.2.1.apk' is not absolute and has been rewritten to '/Users/prashanth/Documents/javascript-appium-framework/app/Android-NativeDemoApp-0.2.1.apk'. Consider using absolute paths rather than relative
 [debug] [35m[UiAutomator2][39m Checking whether app is actually present
@@ -97,7 +97,11 @@
 [debug] [35m[ADB][39m Getting IDs of all 'io.appium.settings' processes
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell 'pgrep --help; echo $?''
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f io\\.appium\\.settings'
-[debug] [35m[AndroidDriver][39m io.appium.settings is already running. There is no need to reset its permissions.
+[debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am start -n io.appium.settings/.Settings -a android.intent.action.MAIN -c android.intent.category.LAUNCHER'
+[debug] [35m[ADB][39m Getting IDs of all 'io.appium.settings' processes
+[debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f io\\.appium\\.settings'
+[debug] [35m[ADB][39m Getting IDs of all 'io.appium.settings' processes
+[debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell pgrep -f io\\.appium\\.settings'
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell appops set io.appium.settings android\:mock_location allow'
 [debug] [35m[Logcat][39m Starting logcat capture
 [debug] [35m[ADB][39m Getting install status for io.appium.uiautomator2.server
@@ -171,17 +175,14 @@
 [35m[WD Proxy][39m Got an unexpected response with status undefined: {"code":"ECONNRESET"}
 [debug] [35m[WD Proxy][39m Matched '/status' to command name 'getStatus'
 [debug] [35m[WD Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
-[35m[WD Proxy][39m Got an unexpected response with status undefined: {"code":"ECONNRESET"}
-[debug] [35m[WD Proxy][39m Matched '/status' to command name 'getStatus'
-[debug] [35m[WD Proxy][39m Proxying [GET /status] to [GET http://localhost:8200/wd/hub/status] with no body
 [debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"None","value":{"ready":true,"message":"UiAutomator2 Server is ready to accept commands"}}
-[debug] [35m[UiAutomator2][39m The initialization of the instrumentation process took 3182ms
+[debug] [35m[UiAutomator2][39m The initialization of the instrumentation process took 2053ms
 [debug] [35m[WD Proxy][39m Matched '/session' to command name 'createSession'
 [debug] [35m[WD Proxy][39m Proxying [POST /session] to [POST http://localhost:8200/wd/hub/session] with body: {"capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk","deviceUDID":"emulator-5554","appPackage":"com.wdiodemoapp"}],"alwaysMatch":{}}}
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":{"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk","deviceUDID":"emulator-5554","appPackage":"com.wdiodemoapp"}],"alwaysMatch":{}}}}
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":{"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","capabilities":{"firstMatch":[{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk","deviceUDID":"emulator-5554","appPackage":"com.wdiodemoapp"}],"alwaysMatch":{}}}}
 [35m[WD Proxy][39m Determined the downstream protocol as 'W3C'
-[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/info] to [GET http://localhost:8200/wd/hub/session/ecaa5761-7521-46a1-8c5b-8b68f1627f83/appium/device/info] with no body
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":{"androidId":"60dfd844b0ff2745","manufacturer":"Google","model":"Android SDK built for x86","brand":"google","apiVersion":"28","platformVersion":"9","carrierName":"Android","realDisplaySize":"1080x2160","displayDensity":440,"networks":[{"type":0,"typeName":"MOBILE","subtype":13,"subtypeName":"LTE","isConnected":true,"detailedState":"CONNECTED","state":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isFailover":false,"isRoaming":false,"capabilities":{"transportTypes":"NET_CAPABILITY_MMS","networkCapabilities":"","linkUpstreamBandwidthKbps":51200,"linkDownBandwidthKbps":102400,"signalStrength":-2147483648,"networkSpecifier":"1","SSID":null}},{"type":1,"typeName":"WIFI","subtype":0,"subtypeName":"","isConnected":true,"detailedState":"CONNECTED","state":"CONNECTED","extraInfo":null,"isAvailable":true,"isFailover":false,"isRoaming":false,"capabilities":{"transportTypes":"NET_CAPABILITY_SUPL","networkCapabilities":"","linkUpstreamBandwidth...
+[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/info] to [GET http://localhost:8200/wd/hub/session/8bd3a63d-143b-4014-ba38-9c5222541f56/appium/device/info] with no body
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":{"androidId":"60dfd844b0ff2745","manufacturer":"Google","model":"Android SDK built for x86","brand":"google","apiVersion":"28","platformVersion":"9","carrierName":"Android","realDisplaySize":"1080x2160","displayDensity":440,"networks":[{"type":0,"typeName":"MOBILE","subtype":13,"subtypeName":"LTE","isConnected":true,"detailedState":"CONNECTED","state":"CONNECTED","extraInfo":"epc.tmobile.com","isAvailable":true,"isFailover":false,"isRoaming":false,"capabilities":{"transportTypes":"NET_CAPABILITY_MMS","networkCapabilities":"","linkUpstreamBandwidthKbps":51200,"linkDownBandwidthKbps":102400,"signalStrength":-2147483648,"networkSpecifier":"1","SSID":null}},{"type":1,"typeName":"WIFI","subtype":0,"subtypeName":"","isConnected":true,"detailedState":"CONNECTED","state":"CONNECTED","extraInfo":null,"isAvailable":true,"isFailover":false,"isRoaming":false,"capabilities":{"transportTypes":"NET_CAPABILITY_SUPL","networkCapabilities":"","linkUpstreamBandwidth...
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window'
 [35m[AndroidDriver][39m Screen already unlocked, doing nothing
 [35m[UiAutomator2][39m Starting 'com.wdiodemoapp/com.wdiodemoapp.MainActivity and waiting for 'com.wdiodemoapp/com.wdiodemoapp.MainActivity'
@@ -191,47 +192,43 @@
 [debug] [35m[ADB][39m Getting focused package and activity
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell dumpsys window windows'
 [debug] [35m[ADB][39m Found package: 'com.wdiodemoapp' and fully qualified activity name : 'com.wdiodemoapp.MainActivity'
-[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8200/wd/hub/session/ecaa5761-7521-46a1-8c5b-8b68f1627f83/appium/device/pixel_ratio] with body: {}
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":2.75}
+[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/pixel_ratio] to [GET http://localhost:8200/wd/hub/session/8bd3a63d-143b-4014-ba38-9c5222541f56/appium/device/pixel_ratio] with body: {}
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":2.75}
 [debug] [35m[WD Proxy][39m Matched '/appium/device/system_bars' to command name 'getSystemBars'
-[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/system_bars] to [GET http://localhost:8200/wd/hub/session/ecaa5761-7521-46a1-8c5b-8b68f1627f83/appium/device/system_bars] with body: {}
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":{"statusBar":66}}
+[debug] [35m[WD Proxy][39m Proxying [GET /appium/device/system_bars] to [GET http://localhost:8200/wd/hub/session/8bd3a63d-143b-4014-ba38-9c5222541f56/appium/device/system_bars] with body: {}
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":{"statusBar":66}}
 [debug] [35m[WD Proxy][39m Matched '/window/current/size' to command name 'getWindowSize'
-[debug] [35m[WD Proxy][39m Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/ecaa5761-7521-46a1-8c5b-8b68f1627f83/window/current/size] with body: {}
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":{"height":2028,"width":1080}}
-[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session a4e2a4eb-4edc-4c97-9129-b45461e79c6f added to master session list
-[debug] [35m[BaseDriver][39m Event 'newSessionStarted' logged at 1573923128184 (20:52:08 GMT+0400 (Gulf Standard Time))
-[debug] [35m[W3C (a4e2a4eb)][39m Cached the protocol value 'W3C' for the new session a4e2a4eb-4edc-4c97-9129-b45461e79c6f
-[debug] [35m[W3C (a4e2a4eb)][39m Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk","deviceUDID":"emulator-5554","appPackage":"com.wdiodemoapp","deviceApiLevel":28,"deviceScreenSize":"1080x2160","deviceScreenDensity":440,"deviceModel":"Android SDK built for x86","deviceManufacturer":"Google","pixelRatio":2.75,"statBarHeight":66,"viewportRect":{"left":0,"top":66,"width":1080,"height":1962}}}
-[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m14258 ms - 987[39m
+[debug] [35m[WD Proxy][39m Proxying [GET /window/current/size] to [GET http://localhost:8200/wd/hub/session/8bd3a63d-143b-4014-ba38-9c5222541f56/window/current/size] with body: {}
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":{"height":2028,"width":1080}}
+[35m[Appium][39m New AndroidUiautomator2Driver session created successfully, session 988f24bc-af63-4eb7-98a5-4e1266823cae added to master session list
+[debug] [35m[BaseDriver][39m Event 'newSessionStarted' logged at 1573938023265 (01:00:23 GMT+0400 (Gulf Standard Time))
+[debug] [35m[W3C (988f24bc)][39m Cached the protocol value 'W3C' for the new session 988f24bc-af63-4eb7-98a5-4e1266823cae
+[debug] [35m[W3C (988f24bc)][39m Responding to client with driver.createSession() result: {"capabilities":{"platform":"LINUX","webStorageEnabled":false,"takesScreenshot":true,"javascriptEnabled":true,"databaseEnabled":false,"networkConnectionEnabled":true,"locationContextEnabled":false,"warnings":{},"desired":{"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9.0","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk"},"browserName":"android","platformName":"android","appiumVersion":"1.15.0","deviceName":"emulator-5554","platformVersion":"9","commandTimeout":1800000,"app":"./app/Android-NativeDemoApp-0.2.1.apk","deviceUDID":"emulator-5554","appPackage":"com.wdiodemoapp","deviceApiLevel":28,"deviceScreenSize":"1080x2160","deviceScreenDensity":440,"deviceModel":"Android SDK built for x86","deviceManufacturer":"Google","pixelRatio":2.75,"statBarHeight":66,"viewportRect":{"left":0,"top":66,"width":1080,"height":1962}}}
+[35m[HTTP][39m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m10317 ms - 987[39m
 [35m[HTTP][39m [90m[39m
-[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/a4e2a4eb-4edc-4c97-9129-b45461e79c6f[39m
+[35m[HTTP][39m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/988f24bc-af63-4eb7-98a5-4e1266823cae[39m
 [35m[HTTP][39m [90m{}[39m
-[debug] [35m[W3C (a4e2a4eb)][39m Calling AppiumDriver.deleteSession() with args: ["a4e2a4eb-4edc-4c97-9129-b45461e79c6f"]
-[debug] [35m[BaseDriver][39m Event 'quitSessionRequested' logged at 1573923128226 (20:52:08 GMT+0400 (Gulf Standard Time))
-[35m[Appium][39m Removing session a4e2a4eb-4edc-4c97-9129-b45461e79c6f from our master session list
+[debug] [35m[W3C (988f24bc)][39m Calling AppiumDriver.deleteSession() with args: ["988f24bc-af63-4eb7-98a5-4e1266823cae"]
+[debug] [35m[BaseDriver][39m Event 'quitSessionRequested' logged at 1573938023311 (01:00:23 GMT+0400 (Gulf Standard Time))
+[35m[Appium][39m Removing session 988f24bc-af63-4eb7-98a5-4e1266823cae from our master session list
 [debug] [35m[UiAutomator2][39m Deleting UiAutomator2 session
 [debug] [35m[UiAutomator2][39m Deleting UiAutomator2 server session
 [debug] [35m[WD Proxy][39m Matched '/' to command name 'deleteSession'
-[debug] [35m[WD Proxy][39m Proxying [DELETE /] to [DELETE http://localhost:8200/wd/hub/session/ecaa5761-7521-46a1-8c5b-8b68f1627f83] with no body
-[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"ecaa5761-7521-46a1-8c5b-8b68f1627f83","value":null}
+[debug] [35m[WD Proxy][39m Proxying [DELETE /] to [DELETE http://localhost:8200/wd/hub/session/8bd3a63d-143b-4014-ba38-9c5222541f56] with no body
+[debug] [35m[WD Proxy][39m Got response with status 200: {"sessionId":"8bd3a63d-143b-4014-ba38-9c5222541f56","value":null}
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell am force-stop com.wdiodemoapp'
 [debug] [35m[Logcat][39m Stopping logcat capture
 [debug] [35m[ADB][39m Removing forwarded port socket connection: 8200 
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 forward --remove tcp\:8200'
 [35m[UiAutomator2][39m Restoring hidden api policy to the device default configuration
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_pre_p_apps'
-[debug] [35m[Instrumentation][39m .
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy_p_apps'
 [debug] [35m[ADB][39m Running '/Users/prashanth/Library/Android/sdk/platform-tools/adb -P 5037 -s emulator-5554 shell settings delete global hidden_api_policy'
-[debug] [35m[BaseDriver][39m Event 'quitSessionFinished' logged at 1573923128773 (20:52:08 GMT+0400 (Gulf Standard Time))
-[debug] [35m[W3C (a4e2a4eb)][39m Received response: null
-[debug] [35m[W3C (a4e2a4eb)][39m But deleting session, so not returning
-[debug] [35m[W3C (a4e2a4eb)][39m Responding to client with driver.deleteSession() result: null
-[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/a4e2a4eb-4edc-4c97-9129-b45461e79c6f [39m[32m200[39m [90m550 ms - 14[39m
+[debug] [35m[BaseDriver][39m Event 'quitSessionFinished' logged at 1573938023590 (01:00:23 GMT+0400 (Gulf Standard Time))
+[debug] [35m[W3C (988f24bc)][39m Received response: null
+[debug] [35m[W3C (988f24bc)][39m But deleting session, so not returning
+[debug] [35m[W3C (988f24bc)][39m Responding to client with driver.deleteSession() result: null
+[35m[HTTP][39m [37m<-- DELETE /wd/hub/session/988f24bc-af63-4eb7-98a5-4e1266823cae [39m[32m200[39m [90m282 ms - 14[39m
 [35m[HTTP][39m [90m[39m
-[debug] [35m[Instrumentation][39m Time: 4.037
-[debug] [35m[Instrumentation][39m 
-[debug] [35m[Instrumentation][39m OK (1 test)
 [35m[Appium][39m Received SIGTERM - shutting down
-[debug] [35m[Instrumentation][39m The process has exited with code 0
+[debug] [35m[Instrumentation][39m .
