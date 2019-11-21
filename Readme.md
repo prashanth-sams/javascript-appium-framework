@@ -39,3 +39,9 @@ npm test
 sudo npm install -g allure-commandline --save-dev
 allure generate allure-results/ && allure open
 ```
+
+### UIAutomatorViewer
+> Open terminal and enter
+```
+/Users/$(whoami)/Library/Android/sdk/tools/bin/uiautomatorviewer
+```
