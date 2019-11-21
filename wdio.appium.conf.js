@@ -1,4 +1,4 @@
-// const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
+const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
 
 exports.config = {
     host: '127.0.0.1',
@@ -29,7 +29,7 @@ exports.config = {
     connectionRetryCount: 3,
     deprecationWarnings: true,
     
-    services: ['appium'],
+    // services: ['appium'],
     appium: {
         args: {
             address: '127.0.0.1',
@@ -55,15 +55,16 @@ exports.config = {
                 disableWebdriverScreenshotsReporting: true,
             }
         ],
-        // [
-        //     'timeline', { 
-        //         outputDir: './timeline-report/timeline' 
-        //     }
-        // ]
+        [
+            'timeline', { 
+                outputDir: './timeline-report' 
+            }
+        ]
     ],
 
-    // services: [
-    //     [TimelineService]
-    // ],
+    services: [ 
+        ['appium'],
+        [TimelineService] 
+    ],
 
 };

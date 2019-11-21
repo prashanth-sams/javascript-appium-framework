@@ -1,5 +1,7 @@
 node_modules/
 .DS_Store
 allure-results/
+allure-report/
+timeline-report/
 appium.txt
 **/.DS_Store
